@@ -3,6 +3,7 @@ package ru.netology;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Keys;
 
 import java.time.Duration;
 
@@ -12,6 +13,9 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class CardDeliveryOrderTest {
 
+    public static String deleteString = Keys.chord(Keys.CONTROL, "a") + Keys.DELETE;
+
+
     @Test
     public void shouldSendCompletedForm() {
         Configuration.holdBrowserOpen = true;
@@ -20,7 +24,8 @@ public class CardDeliveryOrderTest {
         //Заполнить поле Город
         $("[data-test-id=\"city\"] .input__control").setValue("Москва");
         //Заполнить поле Дата встречи спредставителем банка
-        $("[data-test-id='date'] .input__control").setValue("22.12.2021");
+        $("[data-test-id='date'] .input__control").sendKeys(deleteString);
+        $("[data-test-id='date'] .input__control").setValue("22122021");
         //Заполнить поле Фамилия Имя
         $x("//*[@name=\"name\"]").setValue("Иванов Василий");
         //Заполнить поле Мобильный телефон
@@ -30,7 +35,7 @@ public class CardDeliveryOrderTest {
         //Нажать кнопку Забронировать
         $(".button__text").click();
         //Подождать 15 сек
-        $("[data-test-id=\"notification\"]").shouldHave(text("Успешно! Встреча успешно забранирована на 22.12.2021"), Duration.ofSeconds(15));
+        $("[data-test-id=\"notification\"]").shouldHave(text("Встреча успешно забронирована на 22.12.2021"), Duration.ofSeconds(15));
         //Получить всплывающее окно с сообщением "Успешно! Встреча успешно забранирована на
 
     }
