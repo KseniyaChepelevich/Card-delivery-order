@@ -14,5 +14,6 @@ install:
 
 test_script:
   - chmod +x gradlew
+  - ./gradlew test -dselenide.hedless=true --info
 
   - ./gradlew test --info
