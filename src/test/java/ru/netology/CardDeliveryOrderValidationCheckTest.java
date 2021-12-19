@@ -108,8 +108,6 @@ public class CardDeliveryOrderValidationCheckTest {
     }
 
 
-
-
     @Test
     public void shouldSendCompletedFormWithADateIn1Days() {
         Configuration.holdBrowserOpen = true;
