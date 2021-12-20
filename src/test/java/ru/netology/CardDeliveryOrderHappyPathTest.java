@@ -29,7 +29,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedForm() {
         Configuration.holdBrowserOpen = true;
         //Открыть приложение
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         //Заполнить поле Город
         $("[data-test-id=\"city\"] .input__control").setValue("Москва");
         //Заполнить поле Дата встречи спредставителем банка
@@ -53,7 +53,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormWithADateIn3Days() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(3);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -72,7 +72,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormWithADateIn4Days() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(4);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -91,7 +91,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormWithADateIn10Days() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(10);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -110,7 +110,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormWith2LetterName() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(10);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -129,7 +129,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormWith1LetterName() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(10);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -148,7 +148,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormWithOnlyName() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(10);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -167,7 +167,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormWithHapyhenatedName() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(10);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -186,7 +186,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormWithSurnameHyphenated() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(10);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -205,7 +205,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormWithSurnameAndNameHyphenated() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(10);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -224,7 +224,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormshouldSendTheCompletedFormPhoneNumberFor8() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(10);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -243,7 +243,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormshouldSendTheCompletedFormPhoneNumberFor9() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(10);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -262,7 +262,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormshouldSendTheCompletedFormPhoneNumberFor3() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(10);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -281,7 +281,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormshouldSendTheCompletedFormPhoneNumberFor1() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(10);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -300,7 +300,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormshouldSendTheCompletedFormPhoneNumberFor0() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(10);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -319,7 +319,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormshouldSendTheCompletedFormPhoneNumberWithTheSameDigits() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(10);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -338,7 +338,7 @@ public class CardDeliveryOrderHappyPathTest {
     public void shouldSendCompletedFormWithEmptyFieldDate() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(3);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $x("//*[@name=\"name\"]").setValue("Иванов Василий"); //Заполнить поле Фамилия Имя
         $x("//*[@name=\"phone\"]").setValue("+79998885566");//Заполнить поле Мобильный телефон

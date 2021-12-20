@@ -25,7 +25,7 @@ public class CardDeliveryOrderValidationCheckTest {
     @Test
     public void shouldSendTheEmptyForm() {
         Configuration.holdBrowserOpen = true;
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $(".button__text").click();//Нажать кнопку Забронировать
         $("[data-test-id='city'].input_invalid .input__sub").shouldHave(text("Поле обязательно для заполнения"));
 
@@ -36,7 +36,7 @@ public class CardDeliveryOrderValidationCheckTest {
     public void shouldSendCompletedFormWithEmptyFieldCity() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(3);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id='date'] input").doubleClick().sendKeys(deleteString);
         ;//Заполнить поле Дата встречи спредставителем банка
         $("[data-test-id='date'] .input__control").setValue(planningDate);
@@ -54,7 +54,7 @@ public class CardDeliveryOrderValidationCheckTest {
     public void shouldSendCompletedFormWithEmptyFieldName() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(3);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] input").doubleClick().sendKeys(deleteString);
         ;//Заполнить поле Дата встречи спредставителем банка
@@ -73,7 +73,7 @@ public class CardDeliveryOrderValidationCheckTest {
     public void shouldSendCompletedFormWithEmptyFieldPhone() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(3);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] input").doubleClick().sendKeys(deleteString);
         ;//Заполнить поле Дата встречи спредставителем банка
@@ -92,7 +92,7 @@ public class CardDeliveryOrderValidationCheckTest {
     public void shouldSendCompletedFormWithoutClickInCheckbox() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(5);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] input").doubleClick().sendKeys(deleteString);
         ;//Заполнить поле Дата встречи спредставителем банка
@@ -112,7 +112,7 @@ public class CardDeliveryOrderValidationCheckTest {
     public void shouldSendCompletedFormWithADateIn1Days() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(1);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] input").doubleClick().sendKeys(deleteString);
         ;//Заполнить поле Дата встречи спредставителем банка
@@ -131,7 +131,7 @@ public class CardDeliveryOrderValidationCheckTest {
     public void shouldSendCompletedFormWithADateIn2Days() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(2);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] input").doubleClick().sendKeys(deleteString);
         ;//Заполнить поле Дата встречи спредставителем банка
@@ -150,7 +150,7 @@ public class CardDeliveryOrderValidationCheckTest {
     public void shouldSendCompletedFormWithADateIn0Days() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(0);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Москва"); //Заполнить поле Город
         $("[data-test-id='date'] input").doubleClick().sendKeys(deleteString);
         ;//Заполнить поле Дата встречи спредставителем банка
@@ -169,7 +169,7 @@ public class CardDeliveryOrderValidationCheckTest {
     public void shouldSendCompletedFormWithCityKiev() {
         Configuration.holdBrowserOpen = true;
         String planningDate = generateDate(1);
-        open("http://localhost:7777"); //Открыть приложение
+        open("http://localhost:9999"); //Открыть приложение
         $("[data-test-id=\"city\"] .input__control").setValue("Киев"); //Заполнить поле Город
         $("[data-test-id='date'] input").doubleClick().sendKeys(deleteString);
         ;//Заполнить поле Дата встречи спредставителем банка
