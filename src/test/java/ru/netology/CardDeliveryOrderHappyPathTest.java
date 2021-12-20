@@ -350,5 +350,100 @@ public class CardDeliveryOrderHappyPathTest {
 
     }
 
+    @Test
+    public void shouldSendCompletedFormshouldSendTheCompletedFormNarianMar() {
+        Configuration.holdBrowserOpen = true;
+        String planningDate = generateDate(10);
+        open("http://localhost:9999"); //Открыть приложение
+        $("[data-test-id=\"city\"] .input__control").setValue("Нарьян-Мар"); //Заполнить поле Город
+        $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
+        $("[data-test-id='date'] .input__control").setValue(planningDate);
+        $x("//*[@name=\"name\"]").setValue("Иванов-Петров Василий"); //Заполнить поле Фамилия Имя
+        $x("//*[@name=\"phone\"]").setValue("+99999999999");//Заполнить поле Мобильный телефон
+        $("[data-test-id=\"agreement\"] .checkbox__box").click();//Кликнуть чекбокс
+        $(".button__text").click();//Нажать кнопку Забронировать
+        //Подождать 15 сек
+        $("[data-test-id=\"notification\"]").shouldHave(text("Встреча успешно забронирована на " + planningDate), Duration.ofSeconds(15));
+        //Получить всплывающее окно с сообщением "Успешно! Встреча успешно забранирована на
+
+
+    }
+
+    @Test
+    public void shouldSendCompletedFormshouldSendTheCompletedFormAnadir() {
+        Configuration.holdBrowserOpen = true;
+        String planningDate = generateDate(10);
+        open("http://localhost:9999"); //Открыть приложение
+        $("[data-test-id=\"city\"] .input__control").setValue("Анадырь"); //Заполнить поле Город
+        $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
+        $("[data-test-id='date'] .input__control").setValue(planningDate);
+        $x("//*[@name=\"name\"]").setValue("Иванов-Петров Василий"); //Заполнить поле Фамилия Имя
+        $x("//*[@name=\"phone\"]").setValue("+99999999999");//Заполнить поле Мобильный телефон
+        $("[data-test-id=\"agreement\"] .checkbox__box").click();//Кликнуть чекбокс
+        $(".button__text").click();//Нажать кнопку Забронировать
+        //Подождать 15 сек
+        $("[data-test-id=\"notification\"]").shouldHave(text("Встреча успешно забронирована на " + planningDate), Duration.ofSeconds(15));
+        //Получить всплывающее окно с сообщением "Успешно! Встреча успешно забранирована на
+
+
+    }
+
+    @Test
+    public void shouldSendCompletedFormshouldSendTheCompletedFormTambov() {
+        Configuration.holdBrowserOpen = true;
+        String planningDate = generateDate(10);
+        open("http://localhost:9999"); //Открыть приложение
+        $("[data-test-id=\"city\"] .input__control").setValue("Тамбов"); //Заполнить поле Город
+        $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
+        $("[data-test-id='date'] .input__control").setValue(planningDate);
+        $x("//*[@name=\"name\"]").setValue("Иванов-Петров Василий"); //Заполнить поле Фамилия Имя
+        $x("//*[@name=\"phone\"]").setValue("+99999999999");//Заполнить поле Мобильный телефон
+        $("[data-test-id=\"agreement\"] .checkbox__box").click();//Кликнуть чекбокс
+        $(".button__text").click();//Нажать кнопку Забронировать
+        //Подождать 15 сек
+        $("[data-test-id=\"notification\"]").shouldHave(text("Встреча успешно забронирована на " + planningDate), Duration.ofSeconds(15));
+        //Получить всплывающее окно с сообщением "Успешно! Встреча успешно забранирована на
+
+
+    }
+
+    @Test
+    public void shouldSendCompletedFormshouldSendTheCompletedFormSaransk() {
+        Configuration.holdBrowserOpen = true;
+        String planningDate = generateDate(10);
+        open("http://localhost:9999"); //Открыть приложение
+        $("[data-test-id=\"city\"] .input__control").setValue("Саранск"); //Заполнить поле Город
+        $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
+        $("[data-test-id='date'] .input__control").setValue(planningDate);
+        $x("//*[@name=\"name\"]").setValue("Иванов-Петров Василий"); //Заполнить поле Фамилия Имя
+        $x("//*[@name=\"phone\"]").setValue("+99999999999");//Заполнить поле Мобильный телефон
+        $("[data-test-id=\"agreement\"] .checkbox__box").click();//Кликнуть чекбокс
+        $(".button__text").click();//Нажать кнопку Забронировать
+        //Подождать 15 сек
+        $("[data-test-id=\"notification\"]").shouldHave(text("Встреча успешно забронирована на " + planningDate), Duration.ofSeconds(15));
+        //Получить всплывающее окно с сообщением "Успешно! Встреча успешно забранирована на
+
+
+    }
+
+    @Test
+    public void shouldSendCompletedFormshouldSendTheCompletedFormGrozniy() {
+        Configuration.holdBrowserOpen = true;
+        String planningDate = generateDate(10);
+        open("http://localhost:9999"); //Открыть приложение
+        $("[data-test-id=\"city\"] .input__control").setValue("Грозный"); //Заполнить поле Город
+        $("[data-test-id='date'] .input__control").sendKeys(deleteString);//Заполнить поле Дата встречи спредставителем банка
+        $("[data-test-id='date'] .input__control").setValue(planningDate);
+        $x("//*[@name=\"name\"]").setValue("Иванов-Петров Василий"); //Заполнить поле Фамилия Имя
+        $x("//*[@name=\"phone\"]").setValue("+99999999999");//Заполнить поле Мобильный телефон
+        $("[data-test-id=\"agreement\"] .checkbox__box").click();//Кликнуть чекбокс
+        $(".button__text").click();//Нажать кнопку Забронировать
+        //Подождать 15 сек
+        $("[data-test-id=\"notification\"]").shouldHave(text("Встреча успешно забронирована на " + planningDate), Duration.ofSeconds(15));
+        //Получить всплывающее окно с сообщением "Успешно! Встреча успешно забранирована на
+
+
+    }
+
 
 }
