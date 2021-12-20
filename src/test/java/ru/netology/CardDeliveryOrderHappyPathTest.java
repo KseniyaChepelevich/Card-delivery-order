@@ -9,7 +9,9 @@ import java.time.Duration;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
+import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static java.lang.String.format;
@@ -22,6 +24,15 @@ public class CardDeliveryOrderHappyPathTest {
     public static String generateDate(int days) {
         return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
 
+    }
+
+
+
+    public int DateToDays (Date generateDate){
+        //  convert a date to an integer and back again
+        long generateDateTime=generateDate.getTime();
+        //currentTime=currentTime/MAGIC;
+        return (int) generateDateTime;
     }
 
 
@@ -444,6 +455,9 @@ public class CardDeliveryOrderHappyPathTest {
 
 
     }
+
+
+
 
 
 }
